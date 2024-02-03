@@ -1,0 +1,271 @@
+.anime {
+  opacity: 0;
+}
+.fadeUp,
+.fadeDown,
+.fadeRight,
+.fadeLeft,
+.zoomIn,
+.zoomInUp,
+.flipLeft,
+.flipRight {
+  opacity: 1;
+}
+.fadeUp {
+  animation-name: fadeUp;
+  animation-duration: 2s;
+}
+.fadeDown {
+  animation-name: fadeDown;
+  animation-duration: 2s;
+}
+.fadeLeft {
+  animation-name: fadeLeft;
+  animation-duration: 3s;
+}
+
+.fadeRight {
+  animation-name: fadeRight;
+  animation-duration: 3s;
+}
+.zoomInUp {
+  animation-name: zoomInUp;
+  animation-duration: 3s;
+}
+.zoomIn {
+  animation-name: zoomIn;
+  animation-duration: 3s;
+}
+.flipLeft {
+  animation-name: flipLeft;
+  animation-duration: 2s;
+}
+.flipRight{
+    animation-name: flipRight;
+    animation-duration: 2s;
+}
+.ringNotification {
+  animation-name: ringNotification;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.rightArrow {
+  animation-name: rightArrow;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the element you want to fade up */
+.element-to-fade-up {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+}
+
+.element-to-fade-down {
+  animation: fadeDown 1s ease-in-out;
+}
+
+/* Define a CSS keyframes animation named "fadeLeft" */
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(
+      100%
+    ); /* Move the element to the right by 100% of its own width */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply the animation to the element you want to fade in from the left */
+.element-to-fade-left {
+  animation: fadeLeft 1s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+/* Define a CSS keyframes animation named "fadeRight" */
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(
+      -100%
+    ); /* Move the element to the left by 100% of its own width */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply the animation to the element you want to fade in from the right */
+.element-to-fade-right {
+  animation: fadeRight 1s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+/* Define a CSS keyframes animation named "zoomIn" */
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply the animation to the element you want to zoom in */
+.element-to-zoom-in {
+  animation: zoomIn 1s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+/* Define a CSS keyframes animation named "zoomInUp" */
+@keyframes zoomInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Apply the animation to the element you want to zoom in from the bottom */
+.element-to-zoom-in-up {
+  animation: zoomInUp 1s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+/* Define a CSS keyframes animation named "ringNotification" */
+@keyframes ringNotification {
+  0% {
+    transform: scale(1); /* Start with the default size */
+    opacity: 0.7; /* Start with a semi-transparent appearance */
+  }
+  50% {
+    transform: scale(1.2); /* Scale up to 120% of the original size */
+    opacity: 0; /* Make it transparent in the middle of the animation */
+  }
+  100% {
+    transform: scale(1); /* Scale back to the original size */
+    opacity: 0.7; /* Restore the semi-transparent appearance */
+  }
+}
+
+/* Apply the animation to the element representing the ring notification */
+.ring-notification {
+  width: 100px;
+  height: 100px;
+  border: 10px solid #ff5733; /* Adjust border thickness and color as needed */
+  border-radius: 50%; /* Create a circular element */
+  animation: ringNotification 2s infinite; /* Adjust the duration as needed */
+  opacity: 0.7; /* Initial opacity */
+}
+
+@keyframes rightArrow {
+  0% {
+    opacity: 1;
+    transform: translateX(10px) scale(0.6);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(10px) scale(0.6);
+  }
+
+  75% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(10px) scale(0.6);
+  }
+}
+
+/* Not scrolling animation */
+
+.qualification__rounder {
+  animation-name: zoomInOut;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes zoomInOut {
+  0% {
+    scale: 1;
+  }
+  25% {
+    scale: 1.5;
+  }
+  50% {
+    scale: 1;
+  }
+  75% {
+    scale: 1.5;
+  }
+  100% {
+    scale: 1;
+  }
+}
+/* Define a CSS keyframes animation named "flipLeft" */
+@keyframes flipLeft {
+  0% {
+    transform: rotateY(0deg); /* Start with no rotation */
+  }
+  100% {
+    transform: rotateY(-180deg); /* Rotate 180 degrees to the left */
+  }
+}
+
+/* Apply the animation to the element you want to flip left */
+.element-to-flip-left {
+  animation: flipLeft 1s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+@keyframes flipRight {
+  0% {
+    transform: perspective(1200px) rotateY(0deg); /* Start with no rotation */
+  }
+  100% {
+    transform: perspective(1200px) rotateY(180deg); /* Rotate 180 degrees to the right */
+  }
+}
+
+/* Apply the animation to the element you want to flip right */
+.element-to-flip-right {
+  animation: flipRight 1s ease-in-out; /* Adjust the duration and timing function as needed */
+  transform-style: preserve-3d;
+}
+
+
+
+
+
+
